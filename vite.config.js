@@ -3,11 +3,14 @@ import path from "path";
 import AppPackage from "./package.json";
 
 // =========  https://vitejs.dev/config/  =========
-const pathSrc = path.resolve(__dirname, "src");
+const ProjectPath = path.resolve(process.cwd());
+const SrcPath = path.resolve(ProjectPath, "src");
 export default defineConfig({
+  root: ProjectPath,
+  base: "./",
   resolve: {
     alias: {
-      "@": pathSrc,
+      "@": SrcPath,
     },
   },
   plugins: [
