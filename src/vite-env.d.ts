@@ -8,9 +8,6 @@ declare global {
     ViteConst: {
       AppVersion: string;
       AppName: string;
-      ProxyUrl: string;
-      rmAgin: string;
-      BaseUrl: string;
     };
     $Event: {
       [string]: any;

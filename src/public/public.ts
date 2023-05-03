@@ -1,5 +1,5 @@
 import "normalize.css";
-import "./style.scss";
+import "@/public/public.scss";
 import $ from "cash-dom";
 
 if (ViteConst) {
@@ -9,6 +9,6 @@ if (ViteConst) {
   window.$Event = {};
 }
 
-var app = $("#app");
+var PageName = $(".PageName");
 
-console.log(app);
+console.log(PageName[0], window.ViteConst);
