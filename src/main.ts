@@ -3,6 +3,16 @@ import typescriptLogo from "./typescript.svg";
 import viteLogo from "/vite.svg";
 import { setupCounter } from "./counter.ts";
 
+if (ViteConst) {
+  window.ViteConst = {
+    ...ViteConst,
+  };
+  window.$Event = {};
+  // 如果为 正式环境 则强制切换为正式 api
+}
+
+console.log(window.ViteConst);
+
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
