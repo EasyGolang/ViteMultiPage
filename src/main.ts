@@ -3,6 +3,7 @@ import "./style.scss";
 import typescriptLogo from "./typescript.svg";
 import viteLogo from "/vite.svg";
 import { setupCounter } from "./counter.ts";
+import $ from "cash-dom";
 
 if (ViteConst) {
   window.ViteConst = {
@@ -12,7 +13,7 @@ if (ViteConst) {
   // 如果为 正式环境 则强制切换为正式 api
 }
 
-console.log(window.ViteConst);
+console.log($);
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
