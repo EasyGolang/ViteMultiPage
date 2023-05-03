@@ -5,9 +5,11 @@ import AppPackage from "./package.json";
 // =========  https://vitejs.dev/config/  =========
 const ProjectPath = path.resolve(process.cwd());
 const SrcPath = path.resolve(ProjectPath, "src");
+const PagePath = path.resolve(ProjectPath, "page");
+
 export default defineConfig({
   root: ProjectPath,
-  base: "./",
+  // base: "./",
   resolve: {
     alias: {
       "@": SrcPath,
@@ -18,6 +20,11 @@ export default defineConfig({
   ],
   build: {
     target: "chrome75",
+    rollupOptions: {
+      input: {
+        index: path.resolve(PagePath, "index.html"),
+      },
+    },
   },
   define: {
     ViteConst: JSON.stringify({
