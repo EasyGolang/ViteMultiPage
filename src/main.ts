@@ -1,3 +1,4 @@
+import "normalize.css";
 import "./style.scss";
 import typescriptLogo from "./typescript.svg";
 import viteLogo from "/vite.svg";
